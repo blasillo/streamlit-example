@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-
+st.title ("Espiral")
 
 num_points = st.slider("Número de puntos en la espiral", 1, 10000, 1100)
 num_turns = st.slider("Número de giros de la espiral", 1, 300, 31)
@@ -22,7 +22,7 @@ df = pd.DataFrame({
     "rand": np.random.randn(num_points),
 })
 
-st.title ("Espiral")
+
 
 st.altair_chart(alt.Chart(df, height=700, width=700)
     .mark_point(filled=True)
